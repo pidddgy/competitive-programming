@@ -1,5 +1,3 @@
-# NOT FINISHED
-
 numOfPpl = input("")
 pplList = []
 
@@ -10,14 +8,17 @@ rounds = int(input(""))
 
 for i in range(rounds):
     multiple = int(input(""))
-    currentSubIndex = 0
+    currentSubIndex = 1
+    toRemove = []
 
-    for x in range(0,len(pplList) + 1):
+    for x in pplList:
         if currentSubIndex == multiple:
-            pplList.remove(x)
-            currentSubIndex = 0
+            toRemove.append(x)
+            currentSubIndex = 1
+        else:
+            currentSubIndex += 1
 
-        currentSubIndex += 1
+    for x in toRemove:
+        pplList.remove(x)
 
-print(pplList)
-
+print(*pplList, sep="\n")
