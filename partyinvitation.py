@@ -8,17 +8,6 @@ rounds = int(input(""))
 
 for i in range(rounds):
     multiple = int(input(""))
-    currentSubIndex = 1
-    toRemove = []
-
-    for x in pplList:
-        if currentSubIndex == multiple:
-            toRemove.append(x)
-            currentSubIndex = 1
-        else:
-            currentSubIndex += 1
-
-    for x in toRemove:
-        pplList.remove(x)
+    pplList = [friend for index, friend in enumerate(pplList, 1) if index % multiple]
 
 print(*pplList, sep="\n")
