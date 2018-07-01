@@ -1,3 +1,3 @@
-Hi!
+# Competitive-programming
 
-This repo is where I store my solutions to leetcode exercises
+Answers to problems from various sources like the CCC, firecode, and leetcode
