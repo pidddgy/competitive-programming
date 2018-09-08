@@ -6,6 +6,9 @@
 using namespace std;
 
 int main() {
+  cin.sync_with_stdio(0);
+  cin.tie(0);
+
   int N;
   int M;
   cin >> N >> M;
@@ -19,14 +22,8 @@ int main() {
 
     cin >> vertexA >> vertexB;
 
-    for(int server = 0; server < N; server++)
-    {
-      if(server == vertexA - 1)
-      {
-        servers[server].push_back(vertexB);
-        servers[vertexB - 1].push_back(vertexA);
-      }
-    }
+    servers[vertexA - 1].push_back(vertexB);
+    servers[vertexB - 1].push_back(vertexA);
   }
 
   int S;
@@ -34,22 +31,22 @@ int main() {
   cin >> S >> T;
 
   // Get smallest distance from S to T using bfs
-  queue< pair<int, vector<int> > > Q;
+  queue< pair<int, int > > Q;
   vector<bool> visited(N, false);
 
-  Q.push({ S, {S} });
-  visited[0] = true;
+  Q.push({ S, 1 });
+  visited[S - 1] = true;
 
   while(!Q.empty())
   {
     int front = Q.front().first;
-    vector<int> path = Q.front().second;
+    int distance = Q.front().second;
     Q.pop();
 
     if(front == T)
     {
-      int edgesNeeded = path.size() - 1;
-      cout << M - edgesNeeded << endl;
+      int edgesNeeded = distance - 1;
+      cout << M - edgesNeeded << "\n";
       break;
     } else {
       for(unsigned adj = 0; adj < servers[front - 1].size(); adj++)
@@ -57,9 +54,8 @@ int main() {
         if(!visited[servers[front - 1][adj] - 1])
         {
           visited[servers[front - 1][adj] - 1] = true;
-          vector<int> newPath = path;
-          newPath.emplace_back(servers[front - 1][adj]);
-          Q.push({ servers[front - 1][adj], newPath });
+          int newDistance = distance + 1;
+          Q.push({ servers[front - 1][adj], newDistance });
         } 
       }
     }
