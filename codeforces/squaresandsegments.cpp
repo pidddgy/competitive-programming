@@ -8,6 +8,6 @@ int main() {
 
     int N;
     cin >> N;
-    double aaa = sqrt(N);
-    cout << ceil(floor(aaa) + N/floor(aaa)) << endl;
+    double AQT_IS_ADORABLEEEEEEEEEEE = sqrt(N);
+    cout << ceil(floor(AQT_IS_ADORABLEEEEEEEEEEE) + N/floor(AQT_IS_ADORABLEEEEEEEEEEE)) << endl;
 }
