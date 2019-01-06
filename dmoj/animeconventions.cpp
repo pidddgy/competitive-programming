@@ -1,3 +1,5 @@
+// https://dmoj.ca/problem/dmpg17s2
+
 #include<bits/stdc++.h>
 using namespace std;
 
