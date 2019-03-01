@@ -90,7 +90,7 @@
 			"cin.sync_with_stdio(0);",
 			"cin.tie(0);",
 		],
-		"description": "Max value of std::int"
+		"description": "fastio"
 	},
 	"pOptimize": {
 		"prefix": "pOpT",
@@ -117,4 +117,25 @@
 		],
 		"description": "fast endl"
 	},
+
+	"Watch": {
+		"prefix": "watchT",
+		"scope": "cpp",
+		"body": [
+			"#define watch(x) cout << (#x) << \" is \" << (x) << endl;",
+		],
+		"description": "watch"
+	},
+
+	"Compare": {
+		"prefix": "compareT",
+		"scope": "cpp",
+		"body": [
+			"struct Compare {",
+			"\t bool operator()(const pair<int, int>& l, const pair<int, int>& r) {",
+			"\t\treturn l.second > r.second; ",
+			"\t}",
+			"}",
+		]
+	}
 }

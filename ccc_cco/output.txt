@@ -1,0 +1,96 @@
+i is 1
+j is 2
+m is 1
+a[j] - a[j-1] is 2
+a[m] - a[m-1] is 1
+failed
+i is 1
+j is 3
+m is 1
+a[j] - a[j-1] is -2
+a[m] - a[m-1] is 1
+failed
+i is 1
+j is 4
+m is 1
+a[j] - a[j-1] is 1
+a[m] - a[m-1] is 1
+i is 1
+j is 5
+m is 1
+a[j] - a[j-1] is 2
+a[m] - a[m-1] is 1
+failed
+i is 1
+j is 6
+m is 1
+a[j] - a[j-1] is -2
+a[m] - a[m-1] is 1
+failed
+
+i is 2
+j is 3
+m is 1
+a[j] - a[j-1] is -2
+a[m] - a[m-1] is 1
+failed
+i is 2
+j is 4
+m is 1
+a[j] - a[j-1] is 1
+a[m] - a[m-1] is 1
+i is 2
+j is 5
+m is 1
+a[j] - a[j-1] is 2
+a[m] - a[m-1] is 1
+failed
+i is 2
+j is 6
+m is 1
+a[j] - a[j-1] is -2
+a[m] - a[m-1] is 1
+failed
+
+i is 3
+j is 4
+m is 1
+a[j] - a[j-1] is 1
+a[m] - a[m-1] is 1
+
+i is 3
+j is 5
+m is 1
+a[j] - a[j-1] is 2
+a[m] - a[m-1] is 1
+failed
+
+i is 3
+j is 6
+m is 2
+a[j] - a[j-1] is -2
+a[m] - a[m-1] is 2
+failed
+
+i is 4
+j is 5
+m is 1
+a[j] - a[j-1] is 2
+a[m] - a[m-1] is 1
+failed
+i is 4
+j is 6
+m is 1
+a[j] - a[j-1] is -2
+a[m] - a[m-1] is 1
+failed
+
+i is 5
+j is 6
+m is 1
+a[j] - a[j-1] is -2
+a[m] - a[m-1] is 1
+failed
+
+
+6
