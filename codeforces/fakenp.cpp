@@ -1,0 +1,10 @@
+// http://codeforces.com/contest/805/problem/A
+
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int a, b;
+    cin >> a >> b;
+    if(a==b)cout<<a<<endl;
+    else cout << 2 << endl;
+}

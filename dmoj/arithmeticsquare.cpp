@@ -5,18 +5,13 @@
 #define watch(x) cout << (#x) << " is " << (x) << endl;
 #define is ==
 #define isnot !=
+#define pii pair<int, int>
+#define fi first
+#define se second
 using namespace std;
 
 int a[6][6];
-void watchsq() {
-    for(int i = 1; i <= 3; i++) {
-        for(int j = 1; j <= 3; j++) {
-            cout << a[i][j] << " ";
-        }
-        cout << endl;
-    }
-    cout << endl << endl;
-}
+
 void fillSq() {
     if(a[1][1] is UNKNOWN) {
         if(a[1][2] isnot UNKNOWN and a[1][3] isnot UNKNOWN) {
@@ -125,54 +120,50 @@ int main() {
             a[i][j] = UNKNOWN;
     }
     int xcnt = 0;
+    pii shit;
     for(int i = 1; i <= 3; i++) {
         for(int j = 1; j <= 3; j++) {
             string s; cin >> s;
             if(s == "X") {
                 a[i][j] = UNKNOWN;
                 xcnt++;
+                shit = {i, j};
             }
             else a[i][j] = stoi(s);
         }
     }
 
     if(xcnt == 9) a[2][2] = 0;
+    if(xcnt == 8) {
+        
+    }
     for(int i = 1; i <= 100; i++)
     fillSq();
 
     for(int i = 1; i <= 3; i++) {
         for(int j = 1; j <= 3; j++) {
-            watchsq();
             if(a[i][j] is UNKNOWN) {
                 if(a[i-1][j] isnot UNKNOWN) {
                     a[i][j] = a[i-1][j];
-                    for(int k = 1; k <= 50; k++) {
-                        fillSq();
-                    }
+                    for(int k = 1; k <= 50; k++) fillSq();
                     continue;
                 }
 
                 if(a[i+1][j] isnot UNKNOWN) {
                     a[i][j] = a[i+1][j];
-                    for(int k = 1; k <= 50; k++) {
-                        fillSq();
-                    }
+                    for(int k = 1; k <= 50; k++) fillSq();
                     continue;
                 }
 
                 if(a[i][j-1] isnot UNKNOWN) {
                     a[i][j] = a[i][j-1];
-                    for(int k = 1; k <= 50; k++) {
-                        fillSq();
-                    }
+                    for(int k = 1; k <= 50; k++) fillSq();
                     continue;
                 }
 
                 if(a[i][j+1] isnot UNKNOWN) {
                     a[i][j] = a[i][j+1];
-                    for(int k = 1; k <= 50; k++) {
-                        fillSq();
-                    }
+                    for(int k = 1; k <= 50; k++) fillSq();
                     continue;
                 }
             }

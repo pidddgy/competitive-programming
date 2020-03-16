@@ -1,2 +1,2 @@
 
-                        dist[x] = dist[S]+1;
+                    cerr << i << " " << j << " has a d

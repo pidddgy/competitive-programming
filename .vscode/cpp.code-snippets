@@ -87,6 +87,7 @@
 		"prefix": "fastCinCout",
 		"scope": "cpp",
 		"body": [
+			"ios::sync_with_stdio(0);",
 			"cin.sync_with_stdio(0);",
 			"cin.tie(0);",
 		],

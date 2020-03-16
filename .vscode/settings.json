@@ -80,6 +80,11 @@
         "system_error": "cpp",
         "thread": "cpp",
         "tuple": "cpp",
-        "typeindex": "cpp"
+        "typeindex": "cpp",
+        "__errc": "cpp",
+        "__node_handle": "cpp",
+        "optional": "cpp",
+        "editor.quickSuggestions": false,
+        "__functional_03": "cpp"
     }
 }

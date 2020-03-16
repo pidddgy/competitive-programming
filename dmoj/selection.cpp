@@ -29,10 +29,8 @@ void build(int ind, int l, int r) {
 
         seg[bInd][ind] = seg[bInd][left(ind)] + seg[bInd][right(ind)];
     }
-
     // cout << "there are " << seg[bInd][ind] << " of " << bInd << " between " << l << " and " << r << endl;
 }
-
 int uind;
 void update(int ind, int l, int r) {
     if(l == r) {

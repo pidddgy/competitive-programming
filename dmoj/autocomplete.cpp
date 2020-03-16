@@ -50,7 +50,16 @@ int main() {
 
             res += search(s);
             insert(s);
+
+            cout << "hello" << endl;
+            for(pair<char, Trie> x: root.children) {
+                cout << x.first << " ";
+            }
+
+
         } 
+
+        
 
         cout << "Case #"<<i<<": " << res << endl;
     }

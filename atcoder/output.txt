@@ -1,0 +1,297 @@
+s is .11111
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 3
+a_2 has 2
+a_2 has 3
+cnt for 2 is 2
+works
+
+s is .11110
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 2
+a_2 has 2
+a_2 has 3
+cnt for 2 is 2
+
+s is .11101
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 3
+a_2 has 2
+a_2 has 3
+cnt for 2 is 2
+works
+
+s is .11100
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 2
+a_2 has 2
+a_2 has 3
+cnt for 2 is 2
+
+s is .11011
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 3
+a_2 has 2
+a_2 has 3
+cnt for 2 is 1
+
+s is .11010
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 2
+a_2 has 2
+a_2 has 3
+cnt for 2 is 1
+
+s is .11001
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 3
+a_2 has 2
+a_2 has 3
+cnt for 2 is 1
+
+s is .11000
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 2
+a_2 has 2
+a_2 has 3
+cnt for 2 is 1
+
+s is .10111
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 2
+a_2 has 2
+a_2 has 3
+cnt for 2 is 1
+
+s is .10110
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 1
+a_2 has 2
+a_2 has 3
+cnt for 2 is 1
+
+s is .10101
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 2
+a_2 has 2
+a_2 has 3
+cnt for 2 is 1
+
+s is .10100
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 1
+a_2 has 2
+a_2 has 3
+cnt for 2 is 1
+
+s is .10011
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 2
+a_2 has 2
+a_2 has 3
+cnt for 2 is 0
+
+s is .10010
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 1
+a_2 has 2
+a_2 has 3
+cnt for 2 is 0
+works
+
+s is .10001
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 2
+a_2 has 2
+a_2 has 3
+cnt for 2 is 0
+
+s is .10000
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 1
+a_2 has 2
+a_2 has 3
+cnt for 2 is 0
+works
+
+s is .01111
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 2
+a_2 has 2
+a_2 has 3
+cnt for 2 is 2
+
+s is .01110
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 1
+a_2 has 2
+a_2 has 3
+cnt for 2 is 2
+works
+
+s is .01101
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 2
+a_2 has 2
+a_2 has 3
+cnt for 2 is 2
+
+s is .01100
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 1
+a_2 has 2
+a_2 has 3
+cnt for 2 is 2
+works
+
+s is .01011
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 2
+a_2 has 2
+a_2 has 3
+cnt for 2 is 1
+
+s is .01010
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 1
+a_2 has 2
+a_2 has 3
+cnt for 2 is 1
+
+s is .01001
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 2
+a_2 has 2
+a_2 has 3
+cnt for 2 is 1
+
+s is .01000
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 1
+a_2 has 2
+a_2 has 3
+cnt for 2 is 1
+
+s is .00111
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 1
+a_2 has 2
+a_2 has 3
+cnt for 2 is 1
+
+s is .00110
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 0
+a_2 has 2
+a_2 has 3
+cnt for 2 is 1
+
+s is .00101
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 1
+a_2 has 2
+a_2 has 3
+cnt for 2 is 1
+
+s is .00100
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 0
+a_2 has 2
+a_2 has 3
+cnt for 2 is 1
+
+s is .00011
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 1
+a_2 has 2
+a_2 has 3
+cnt for 2 is 0
+works
+
+s is .00010
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 0
+a_2 has 2
+a_2 has 3
+cnt for 2 is 0
+
+s is .00001
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 1
+a_2 has 2
+a_2 has 3
+cnt for 2 is 0
+works
+
+s is .00000
+a_1 has 1
+a_1 has 2
+a_1 has 5
+cnt for 1 is 0
+a_2 has 2
+a_2 has 3
+cnt for 2 is 0
+
+8

@@ -6,6 +6,18 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Kruskal",
+            "request": "launch",
+            "mainClass": "Kruskal"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - asdfsfsfdfsdf",
+            "request": "launch",
+            "mainClass": "asdfsfsfdfsdf"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - pusheendesigns",
             "request": "launch",
             "mainClass": "pusheendesigns"
