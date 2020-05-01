@@ -1,46 +1,47 @@
-// link
+// https://codeforces.com/contest/305/problem/C
 
 #include <bits/stdc++.h>
+#define watch(x) cerr << (#x) << " is " << (x) << endl;
 using namespace std;
-vector<string> answer;
+#define endl '\n'
+#define pii pair<int, int>
+#define fi first
+#define se second
+signed main() {
+    ios::sync_with_stdio(0);
+    cin.sync_with_stdio(0);
+    cin.tie(0);
 
-void getStrings( string s, int digitsLeft )
-{
-   if( digitsLeft == 0 ) // the length of string is n
-      answer.push_back( s );
-   else
-   {
-      getStrings( s + "0", digitsLeft - 1 );
-      getStrings( s + "1", digitsLeft - 1 );
-   }
-}
+    int N;
+    cin >> N;
+    
+    map<int, int> m;
+    for(int i = 1; i <= N; i++) {
+        int a;
+        cin >> a;
 
-
-int main() {
-    for(int thing = 100; thing <= 100; thing++) {
-            getStrings( "", thing);
-
-        int ans = 0;
-        for(string x: answer) {
-            bool good = true;
-            for(int i = 1; i+1 < x.size(); i++) {
-                if(x[i] == x[i-1] and x[i] == x[i+1]) {
-                    good = false;
-                }
-            }
-            if(good) {
-                cout << x << endl;
-                ans++;
-            }
-        }
-        cout << "----" << endl;
-        cout << ans << endl;
-
-        answer = vector<string>();
-
-
+        m[a]++;
     }
 
-    
+    for(pii x: m) {
+        if(x.se > 2) {
+            int rem = x.se%2;
+            m[x.fi+1] += x.se-rem;
+            m[x.fi] = rem;
+        }
+    }
 
+    int ma = 0;
+    for(pii x: m) {
+        ma = max(ma, x.fi);
+    }
+
+    int ans = 0;
+    for(int i = 0; i <= ma; i++) {
+        if(m[i] == 0) {
+            ans++;
+        }
+    }
+
+    cout << ans << endl;
 }

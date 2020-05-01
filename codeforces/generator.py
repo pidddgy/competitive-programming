@@ -1,12 +1,10 @@
 #!python3
-
+import string
 import random
 
-N = random.randint(1, 20)
-
+print(1)
+N = random.randint(0,9)
 print(N)
 
 for i in range(N):
-    print(random.randint(1, 30), end = ' ')
-
-print()
+    print(random.randint(1, 20))
