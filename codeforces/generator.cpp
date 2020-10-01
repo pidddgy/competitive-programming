@@ -1,18 +1,22 @@
 // Link
 
 #include <bits/stdc++.h>
-#define watch(x) cerr << (#x) << " is " << (x) << endl;
 using namespace std;
-#define endl '\n'
+#define watch(x) cerr << (#x) << " is " << (x) << endl;
+#define endl '\n' 
+
 signed main() {
     ios::sync_with_stdio(0);
     cin.sync_with_stdio(0);
     cin.tie(0);
-    srand(time(0));
-    
-    cout << 100 << endl;
-    for(int i = 1; i <= 100; i++) {
-        cout << 1 << " ";
-    }
-    cout << endl;
+
+    auto seed = chrono::high_resolution_clock::now().time_since_epoch().count();
+    mt19937 mt(seed);
+
+    cout << 1 << endl;
+
+    int n = (mt()%23)+1;
+    int k = mt()%(n-3 + 1) + 3;
+
+    cout << n << " " << k << endl;
 }

@@ -1,10 +1,1 @@
-#!python3
-import string
-import random
-
-print(1)
-N = random.randint(0,9)
-print(N)
-
-for i in range(N):
-    print(random.randint(1, 20))
+print((lambda a:str(a[0])+" "+str(a[len(a)-1])+" "+str((a[len(a)//2]+a[len(a)//2-((len(a)&1)^1)])/2))(sorted([int(x) for x in input().split()])))

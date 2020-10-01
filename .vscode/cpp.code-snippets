@@ -19,113 +19,58 @@
 		"prefix": "cppT",
 		"scope": "cpp",
 		"body": [
-			"// ${1:link}",
-			"",
-			"#include <bits/stdc++.h>",
-			"using namespace std;",
-			"int main() {",
-			"\t$0",
-			"}"
+			"// ${1:Link}",
+            "",
+            "#include <bits/stdc++.h>",
+            "using namespace std;",
+            "// #define cerr if(false) cerr",
+            "#define watch(x) cerr << (#x) << \" is \" << (x) << endl;",
+            "#define endl '\\n'",
+            "#define ld long double",
+            "#define int long long",
+            "#define pii pair<int, int>",
+            "#define fi first",
+            "#define se second",
+            "#define sz(a) (int)a.size()",
+            "#define all(x) (x).begin(), (x).end()\n",
+            "void solve() {",
+            "\t",
+            "}\n",
+            "signed main() {",
+            "\tios::sync_with_stdio(0);",
+            "\tcin.tie(0);\n",
+            "\t$0",
+            "}",
+            "\n/*\n",
+            "*/\n",
+            "// Did you read the bounds?",
+            "// Did you make typos?",
+            "// Are there edge cases (N=1?)",
+            "// Are array sizes proper (scaled by proper constant, for example 2* for koosaga tree)",
+            "// Integer overflow?",
+            "// DS reset properly between test cases?",
+            "// Is using long longs causing TLE?",
+            "// Are you using floating points?\n",
 		],
 		"description": "C++ starter template"
-	},
-	"forLoop": {
-		"prefix": "forT",
-		"scope": "cpp",
-		"body": [
-			"for(int $varName = $startingInd; $varName < ${endingInd}; $varName++) {",
-			"\t$0",
-			"}",
-		],
-		"description": "For loop template"
-	},
-	"forAuto": {
-		"prefix": "forAutoT",
-		"scope": "cpp",
-		"body": [
-			"for(auto $varName: $iterator) {",
-			"\t$0",
-			"}",
-		],
-		"description": "For auto:it loop template"
-	},
-	"ifStatement": {
-		"prefix": "ifT",
-		"scope": "cpp",
-		"body": [
-			"if($condition) {",
-			"\t$0",
-			"}",
-		],
-		"description": "For auto:it loop template"
-	},
-	"elemAtInd": {
-		"prefix": "elemAtInd",
-		"scope": "cpp",
-		"body": [
-			"$iterable[$index]",
-		],
-		"description": "Get element at index i."
-	},
-	"scan": {
-		"prefix": "scanfT",
-		"scope": "cpp",
-		"body": [
-			"scanf(\"$data\", $varNames);",
-		],
-		"description": "Scanning template"
-	},
-	"IntMaxVal": {
-		"prefix": "maxIntT",
-		"scope": "cpp",
-		"body": [
-			"2147483647",
-		],
-		"description": "Max value of std::int"
-	},
-	"fastCinCout": {
-		"prefix": "fastCinCout",
-		"scope": "cpp",
-		"body": [
-			"ios::sync_with_stdio(0);",
-			"cin.sync_with_stdio(0);",
-			"cin.tie(0);",
-		],
-		"description": "fastio"
-	},
-	"pOptimize": {
+    },
+
+	"Fast Pragma": {
 		"prefix": "pOpT",
 		"scope": "cpp",
 		"body": [
 			"#pragma GCC optimize \"Ofast\"",
 		],
-		"description": "Optimize compiler"
-	},
-	"quickScan": {
-		"prefix": "quickScanT",
-		"scope": "cpp",
-		"body": [
-			"#define scan(x) do{while((x=getchar())<'0'); for(x-='0'; '0'<=(_=getchar()); x=(x<<3)+(x<<1)+_-'0');}while(0)",
-			"char _;",
-		],
-		"description": "quickScan"
-	},
-	"fastEndl": {
-		"prefix": "fastEndl",
-		"scope": "cpp",
-		"body": [
-			"#define endl '\\n'",
-		],
-		"description": "fast endl"
-	},
+		"description": "Set pragma optimization level to high"
+    },
 
 	"Watch": {
 		"prefix": "watchT",
 		"scope": "cpp",
 		"body": [
-			"#define watch(x) cout << (#x) << \" is \" << (x) << endl;",
+			"#define watch(x) cerr << (#x) << \" is \" << (x) << endl;",
 		],
-		"description": "watch"
+		"description": "Debug variable"
 	},
 
 	"Compare": {
@@ -133,10 +78,125 @@
 		"scope": "cpp",
 		"body": [
 			"struct Compare {",
-			"\t bool operator()(const pair<int, int>& l, const pair<int, int>& r) {",
-			"\t\treturn l.second > r.second; ",
+			"\tbool operator()(${1:left}, ${2:right}) {",
+			"\t\treturn ${3:condition} ",
 			"\t}",
-			"}",
-		]
-	}
+			"};",
+        ],
+		"description": "Return true if left should go before right",
+    },
+
+    "Pair Nacro": {
+        "prefix": "pairT",
+        "scope": "cpp",
+        "body": [
+            "#define ${1:} pair<${2:fi}, ${3:se}>",
+            "#define fi first",
+            "#define se second"
+        ],
+        "description": "Macro pair",
+    },
+
+    "mt19937": {
+        "prefix": "randomT",
+        "scope": "cpp",
+        "body": [
+            "auto seed = chrono::high_resolution_clock::now().time_since_epoch().count();",
+            "mt19937 mt(seed);",
+        ],
+        "description": "mt19937 rng. ex: mt()%mod",
+    },
+
+    "Long Long Macro": {
+        "prefix": "llT",
+        "scope": "cpp",
+        "body": [
+            "#define ll long long",
+        ],
+        "description": "Macro ll to long long",
+    },
+
+    "Fast Modpow": {
+        "prefix": "modpowT",
+        "scope": "cpp",
+        "body": [
+            "int modpow(int a, int exp) {",
+            "\tif(exp == 0) return 1;\n",
+            "\tint t = modpow(a, exp / 2);",
+            "\tif(exp % 2) return t*t % MOD * a%MOD;",
+            "\treturn t*t % MOD;",
+            "}"
+        ],
+        "description": "Fast mod pow",
+    },
+
+    "Mod Inverse": {
+        "prefix": "modInvT",
+        "scope": "cpp",
+        "body": [
+            "int modinv(int a) {",
+            "\treturn modpow(a, MOD-2);",
+            "}",
+        ],
+        "description": "Mod inverse of a",
+    },
+
+    "Mod N Choose K": {
+        "prefix": "nkT",
+        "scope": "cpp",
+        "body": [
+            "int nk(int n, int k) {",
+            "\tif(n < k) return 0;",
+            "\treturn (fac[n] * (modinv(fac[k])*modinv(fac[n-k]) % MOD)) % MOD;",
+            "}",
+        ],
+        "description": "N choose K % MOD",
+    },
+
+    "Block Cerr": {
+        "prefix": "cerrT",
+        "scope": "cpp",
+        "body": [
+            "#define cerr if(false) cerr",
+        ],
+        "description": "Block all calls to cerr",
+    },
+
+    "GCD": {
+        "prefix": "gcdT",
+        "scope": "cpp",
+        "body": [
+            "int gcd(int a, int b) { return b ? gcd(b, a%b) : a; }",
+        ],
+        "description": "gcd",
+    },
+
+    "LCM": {
+        "prefix": "lcmT",
+        "scope": "cpp",
+        "body": [
+            "int lcm(int a, int b) { return a*b / gcd(a, b); }",
+        ],
+        "description": "lcm",
+    },
+
+    "set precision": {
+        "prefix": "precisionT",
+        "scope": "cpp",
+        "body": [
+            "cerr << fixed << setprecision(${1});",
+            "cout << fixed << setprecision(${1});",
+        ],
+        "description": "lcm",
+    },
+
+    "fast i/o": {
+        "prefix": "scanT",
+        "scope": "cpp",
+        "body": [
+            "#define scan(x) do{while((x=getchar())<'0'); for(x-='0'; '0'<=(_=getchar()); x=(x<<3)+(x<<1)+_-'0');}while(0)",
+            "char _;"
+        ],
+        "description": "lcm",
+    }
 }

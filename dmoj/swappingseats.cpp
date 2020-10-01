@@ -1,73 +1,185 @@
-// reeeee
+// https://dmoj.ca/problem/ccc20s4
 
 #include <bits/stdc++.h>
-#define watch(x) cout << (#x) << " is " << (x) << endl;
+#define cerr if(false) cerr
+#define watch(x) cerr << (#x) << " is " << (x) << endl;
 using namespace std;
 int main() {
-    string S;
+    #define int long long
+    srand(time(0));
+    clock_t z = clock();
 
+    string S;
     cin >> S;
 
-    if(S == "BABCBCACCA") {
-        cout << 2 << endl;
-        return 0;
-    }
+    int acnt = 0;
+    int bcnt = 0;
+    int ccnt = 0;
 
-    string shit;
-    int numa=  0;
-    int numb = 0;
-    vector<int> a;
-    vector<int> b;
+    for(char x: S) {
+        if(x == 'A') {
+            acnt++;
+        }
 
-    int aind = 0;
-    int bind = 0;
-    for(int i = 0; i < S.size(); i++) {
-        if(S[i] == 'A') {
-            numa++;
-            a.emplace_back(i);
-        } else {
-            numb++;
-            b.emplace_back(i);
+        if(x == 'B') {
+            bcnt++;
+        }
+        if(x == 'C') {
+            ccnt++;
         }
     }
-    for(int pad = 0; pad < 10000; pad++) {
-        for(int i= 0; i < numa ; i++) {
-        shit.push_back('A');
-    }
-        for(int i= 0; i < numb ; i++) {
-            shit.push_back('B');
-        }
-    }
-    // watch(shit)
 
+    int lol = 0;
     int ans = INT_MAX;
+    for(;;) {
+        lol++;
+        string match;
 
-    for(int i = 0; i < 10000; i++) {
-        int swap = 0;
+        int out = (rand()%3)+1;
 
-        string shit2;
+        cerr << "out is " << out << endl;
 
-        string Scpy = S;
+        for(;;) {
+            if(out == 3 and ccnt == 0) {
+                out = (rand()%3)+1;
+            } else if(out == 2 and bcnt == 0) {
+                out = (rand()%3)+1;
+            } else if(out == 1 and acnt == 0) {
+                out = (rand()%3)+1;
+            } else break;
+        }
 
-        for(int j = 0; j < S.size(); j++) {
-            shit2.push_back(shit[i+j]);
-            if(i+j >= shit.size()) {
-                assert(false);
+
+        if((out == 1) and acnt) {
+            int l = (rand()%acnt)+1;
+            int r = acnt-l;
+
+            for(int i = 1; i <= l; i++) {
+                match += "A";
             }
-            if(shit[i+j] != Scpy[j]) {
+
+            if((rand()%2) == 0) {
+                for(int i = 1; i <= bcnt; i++) {
+                    match += "B";
+                }
+
+                for(int i = 1; i <= ccnt; i++) {
+                    match += "C";
+                }
+            } else {
+                for(int i = 1; i <= ccnt; i++) {
+                    match += "C";
+                }
                 
-                swap++;
+                for(int i = 1; i <= bcnt; i++) {
+                    match += "B";
+                }
+            }
+
+            for(int i = 1; i <= r; i++) {
+                match += "A";
+            }
+
+            cerr << "match is now " << match << endl;
+        } else if ((out == 2) and bcnt) {
+            int l = (rand()%bcnt)+1;
+            int r = bcnt-l;
+
+            for(int i = 1; i <= l; i++) {
+                match += "B";
+            }
+
+            if((rand()%2) == 0) {
+                for(int i = 1; i <= acnt; i++) {
+                    match += "A";
+                }
+
+                for(int i = 1; i <= ccnt; i++) {
+                    match += "C";
+                }
+            } else {
+                for(int i = 1; i <= ccnt; i++) {
+                    match += "C";
+                }
+                
+                for(int i = 1; i <= acnt; i++) {
+                    match += "A";
+                }
+            }
+
+            for(int i = 1; i <= r; i++) {
+                match += "B";
+            }
+
+            cerr << "match is now " << match << endl;
+
+        } else if ((out == 3)) {
+            int l = (rand()%ccnt)+1;
+            int r = ccnt-l;
+
+            cerr << "l is " << l << endl;
+            cerr << "r is " << r << endl;
+
+            for(int i = 1; i <= l; i++) {
+                match += "C";
+            }
+
+            if((rand()%2) == 0) {
+                for(int i = 1; i <= acnt; i++) {
+                    match += "A";
+                }
+
+                for(int i = 1; i <= bcnt; i++) {
+                    match += "B";
+                }
+            } else {
+                for(int i = 1; i <= bcnt; i++) {
+                    match += "B";
+                }
+                
+                for(int i = 1; i <= acnt; i++) {
+                    match += "A";
+                }
+            }
+
+            for(int i = 1; i <= r; i++) {
+                match += "C";
+            }
+
+            cerr << "match is now " << match << endl;
+            
+        }
+
+        // match = "ACBAB";
+        if(match.size() != S.size()) {
+            cerr << "oh no" << endl;
+            cerr << match << endl;
+        }
+        assert(match.size() == S.size());
+        cerr << "match is " << match << endl;
+
+        int cost = 0;
+        for(int i = 0; i < match.size(); i++) {
+            if(S[i] != match[i]) {
+                cost++;
             }
         }
 
-        ans = min(ans, swap/2);
-        watch(shit2)
-        cout << "         " << S << endl;
-        watch(swap/2)
-        watch(ans)
-        cout << endl;
+        cost--;
+        // cost /= 2;
+
+        cerr << "cost is " << cost << endl;
+        ans = min(ans, cost);
+
+        if(lol % 3 ==0)
+        if(((clock()-z) / (double)CLOCKS_PER_SEC) > 0.8) break;
+
     }
 
     cout << ans << endl;
+
     
 }
+
+        
+// if(((clock()-z) / (double)CLOCKS_PER_SEC) > 2.5) break;
