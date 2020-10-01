@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "defines": [],
+            "macFrameworkPath": [
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks"
+            ]
+        }
+    ],
+    "version": 4
+}

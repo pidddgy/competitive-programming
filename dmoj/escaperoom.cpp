@@ -1,5 +1,3 @@
-// link
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -14,16 +12,12 @@ int a[maxnm][maxnm];
 bool vis[maxnm][maxnm];
 int M, N;
 set<int> fuckk;
-bool thing = false;
+
 
 void recurse(int r, int c) {
+    if(vis[M][N]) return;
     vis[r][c] = true;
     int val = a[r][c];
-
-    if(r == M and c == M) {
-        cout << "yes" << endl;
-        thing = true;
-    }
     
     if(fuckk.find(val) == fuckk.end())
     for(int i = 1; i <= min(val, (int)(sqrt(val) + 5)); i++) {
@@ -64,7 +58,6 @@ int main() {
 
     recurse(1, 1);
 
-    if(thing) return 0;
     if(vis[M][N]) cout << "yes" << endl;
     else cout << "no" << endl;
 }

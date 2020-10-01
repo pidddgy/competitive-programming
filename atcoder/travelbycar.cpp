@@ -81,14 +81,14 @@ signed main() {
         priority_queue<Cute, vector<Cute>, Compare> pq;
         pq.push(Cute(0, 0, st));
 
-        while(!pq.empty()) {
-            Cute S = pq.top();
-            pq.pop();
+        // while(!pq.empty()) {
+        //     Cute S = pq.top();
+        //     pq.pop();
 
-            for(pii adj: G[S.dest]) {
-                if(S.)
-            }
-        } 
+        //     for(pii adj: G[S.dest]) {
+        //         if(S.)
+        //     }
+        // } 
     }
 
 

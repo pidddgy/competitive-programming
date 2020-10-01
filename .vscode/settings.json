@@ -84,7 +84,19 @@
         "__errc": "cpp",
         "__node_handle": "cpp",
         "optional": "cpp",
-        "editor.quickSuggestions": false,
-        "__functional_03": "cpp"
-    }
+        "__functional_03": "cpp",
+        "*.tcc": "cpp",
+        "any": "cpp",
+        "bit": "cpp",
+        "charconv": "cpp",
+        "codecvt": "cpp",
+        "cuchar": "cpp",
+        "memory_resource": "cpp",
+        "shared_mutex": "cpp",
+        "variant": "cpp",
+        "ranges": "cpp",
+        "span": "cpp"
+    },
+    "workbench.list.automaticKeyboardNavigation": false,
+    "python.linting.enabled": false
 }
