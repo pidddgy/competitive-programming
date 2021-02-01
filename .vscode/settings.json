@@ -95,8 +95,13 @@
         "shared_mutex": "cpp",
         "variant": "cpp",
         "ranges": "cpp",
-        "span": "cpp"
+        "span": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "numbers": "cpp",
+        "stop_token": "cpp"
     },
     "workbench.list.automaticKeyboardNavigation": false,
-    "python.linting.enabled": false
+    "python.linting.enabled": true,
+    "C_Cpp.intelliSenseEngineFallback": "Enabled"
 }

@@ -19,8 +19,6 @@
 		"prefix": "cppT",
 		"scope": "cpp",
 		"body": [
-			"// ${1:Link}",
-            "",
             "#include <bits/stdc++.h>",
             "using namespace std;",
             "// #define cerr if(false) cerr",
@@ -31,7 +29,8 @@
             "#define pii pair<int, int>",
             "#define fi first",
             "#define se second",
-            "#define sz(a) (int)a.size()",
+            "#define sz(a) (int)(a).size()",
+            "#define y1 lsdjkfhshfdsighoihweogihewoghi",
             "#define all(x) (x).begin(), (x).end()\n",
             "void solve() {",
             "\t",
@@ -46,7 +45,7 @@
             "// Did you read the bounds?",
             "// Did you make typos?",
             "// Are there edge cases (N=1?)",
-            "// Are array sizes proper (scaled by proper constant, for example 2* for koosaga tree)",
+            "// Are array sizes proper?",
             "// Integer overflow?",
             "// DS reset properly between test cases?",
             "// Is using long longs causing TLE?",
@@ -187,7 +186,7 @@
             "cerr << fixed << setprecision(${1});",
             "cout << fixed << setprecision(${1});",
         ],
-        "description": "lcm",
+        "description": "precision",
     },
 
     "fast i/o": {
@@ -197,6 +196,16 @@
             "#define scan(x) do{while((x=getchar())<'0'); for(x-='0'; '0'<=(_=getchar()); x=(x<<3)+(x<<1)+_-'0');}while(0)",
             "char _;"
         ],
-        "description": "lcm",
+        "description": "fast scan",
+    },
+
+    "usaco": {
+        "prefix": "usacoT",
+        "scope": "cpp",
+        "body": [
+            "freopen(\"${1}.in\", \"r\", stdin);",
+            "freopen(\"${1}.out\", \"w\", stdout);"
+        ],
+        "description": "usaco input/output",
     }
 }

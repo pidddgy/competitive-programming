@@ -1,2 +1,2 @@
 
-            if(b[i] != a[r]) {
+using namespace std;

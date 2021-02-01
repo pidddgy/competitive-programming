@@ -23,6 +23,7 @@ int a[maxn];
 int seg[maxn*4];
 int n, q;
 
+// segtree implementation 
 void upd(int pos, int val, int ind = 1, int cl = 1, int cr = n) {
     if(cl == cr) {
         seg[ind] = val;
