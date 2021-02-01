@@ -12,7 +12,7 @@ using namespace std;
 #define se second
 #define sz(a) (int)a.size()
 #define all(x) (x).begin(), (x).end()
-n
+
 void solve() {
     
 }
