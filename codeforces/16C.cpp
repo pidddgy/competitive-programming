@@ -1,6 +1,10 @@
 // https://codeforces.com/contest/710/problem/C
 
 #include <bits/stdc++.h>
+#include <iostream>
+#include <queue>
+#include <vector>
+
 #define watch(x) cerr << (#x) << " is " << (x) << endl;
 using namespace std;
 #define endl '\n'
