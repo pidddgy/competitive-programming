@@ -13,4 +13,4 @@ at this point it's not organized at all so heres a [log of all my solves](https:
 
 -CCC Senior 2020 (Grade 9): 39/75 (lol at least i improved a bit)
 
--CCC Senior 2021 (Grade 10): 69/75 (fucking end my life im gonna be like somewhere between 4-6 points off cco)
+-CCC Senior 2021 (Grade 10): 67/75 (fucking end my life im gonna be like somewhere between 4-6 points off cco)
